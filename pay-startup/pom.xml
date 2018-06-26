@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.senyint</groupId>
+        <groupId>com.github.tiger</groupId>
         <artifactId>pay</artifactId>
         <version>1.0.0</version>
     </parent>
@@ -46,16 +46,35 @@
     </build>
 
     <dependencies>
-        <!-- senyint -->
         <dependency>
-            <groupId>com.senyint</groupId>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.11.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.10</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.tiger</groupId>
             <artifactId>common</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.senyint</groupId>
+            <groupId>com.github.tiger</groupId>
             <artifactId>pay-service</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay.jarslink</groupId>
+            <artifactId>jarslink-api</artifactId>
+            <version>1.6.1.20180301</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>2.0.1.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

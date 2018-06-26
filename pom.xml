@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.senyint</groupId>
+    <groupId>com.github.tiger</groupId>
     <artifactId>pay</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -69,7 +69,7 @@
         <!-- jedis -->
         <jedis.version>2.9.0</jedis.version>
         <!-- google -->
-        <google.guava.version>19.0</google.guava.version>
+        <google.guava.version>20.0</google.guava.version>
         <google.gson.version>2.3</google.gson.version>
         <google.protobuf.version>2.6.1</google.protobuf.version>
         <!-- mysql -->
@@ -88,7 +88,7 @@
         <zookeeper.version>3.4.6</zookeeper.version>
         <!-- zookeeper client -->
         <zkclient.version>0.4</zkclient.version>
-        <curator.version>2.11.0</curator.version>
+        <curator.version>2.12.0</curator.version>
         <!-- dubbo -->
         <dubbo.version>2.4.10</dubbo.version>
         <!-- scala -->
@@ -114,6 +114,8 @@
         <!-- hystrix -->
         <hystrix.version>1.5.12</hystrix.version>
         <hystrix-metrics-event-stream.version>1.5.12</hystrix-metrics-event-stream.version>
+        <!-- disruptor -->
+        <disruptor.version>3.3.7</disruptor.version>
 
         <!-- ********************* 后续要废弃依赖 ********************* -->
 
@@ -316,6 +318,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- disruptor -->
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
+            </dependency>
             <!-- hystrix -->
             <dependency>
                 <groupId>com.netflix.hystrix</groupId>
@@ -630,11 +638,11 @@
                 <version>${dubbo.version}</version>
             </dependency>
             <!-- zookeeper client -->
-            <dependency>
-                <groupId>com.101tec</groupId>
-                <artifactId>zkclient</artifactId>
-                <version>${zkclient.version}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.101tec</groupId>-->
+                <!--<artifactId>zkclient</artifactId>-->
+                <!--<version>${zkclient.version}</version>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-recipes</artifactId>
@@ -719,6 +727,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- disruptor -->
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+        </dependency>
         <!-- hystrix -->
         <dependency>
             <groupId>com.netflix.hystrix</groupId>

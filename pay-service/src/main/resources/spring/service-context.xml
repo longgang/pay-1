@@ -7,8 +7,8 @@
            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 扫描服务组件 -->
-    <context:component-scan base-package="com.senyint.**.rpc"/>
-    <context:component-scan base-package="com.senyint.**.service"/>
+    <context:component-scan base-package="com.github.**.rpc"/>
+    <context:component-scan base-package="com.github.**.service"/>
 
     <!-- 参数验证 -->
     <bean id="serviceValidationMessageSource"
@@ -28,6 +28,6 @@
     <!-- 加载数据访问配置 -->
     <import resource="classpath:spring/dao-context.xml"/>
     <!-- RPC -->
-    <import resource="classpath:com/senyint/pay/dubbo/pay-provider.xml"/>
+    <import resource="classpath:com/github/tiger/pay/dubbo/pay-provider.xml"/>
 
 </beans>
